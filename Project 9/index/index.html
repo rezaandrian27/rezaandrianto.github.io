@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio-Project-2.1</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <h4>Rezandrianto Web Portofolio</h4>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="content">
+        <img src="/lib/WhatsApp Image 2021-10-10 at 17.36.48 (1).jpeg" alt="Gue" />
+        <h2>Helo, My Name is Mohammad Reza Andrianto</h2>
+        <h3>
+          I am <br />
+          Junior Front End Developer
+        </h3>
+        <h4>This is my mini-portfolio</h4>
+      </div>
+    </div>
+
+    <section class="About">
+      <div class="contentBx">
+        <h2 class="heading">About Me</h2>
+        <p>
+          Halo!, Nama saya Mohammad Reza Andrianto saya laki laki kelahiran sukabumi <br />
+          tepatnya di cimelati saya lulus dari Madrasah Aliyah Negeri 19 Jakarta pada tahun 2013 <br />
+          dan lulus dari perkuliahan pada tahun 2016 jurusan kuliah saya adalah Teknologi Industri di Politeknik Negeri Yogyakarta, <br />
+          dan sekarang saya sedang fokus menjadi Front End Engineer yang dibutuhkan oleh banyak industri saya juga seorang Freelance Graphic Designer <br />
+          Jika butuh saya dalam project ataupun acara anda, saya senang bisa dihubungi! <br />
+          Halo!, Nama saya Mohammad Reza Andrianto saya laki laki kelahiran sukabumi <br />
+          tepatnya di cimelati saya lulus dari Madrasah Aliyah Negeri 19 Jakarta pada tahun 2013 <br />
+          dan lulus dari perkuliahan pada tahun 2016 jurusan kuliah saya adalah Teknologi Industri di Politeknik Negeri Yogyakarta, <br />
+          dan sekarang saya sedang fokus menjadi Front End Engineer yang dibutuhkan oleh banyak industri saya juga seorang Freelance Graphic Designer <br />
+          Jika butuh saya dalam project ataupun acara anda, saya senang bisa dihubungi!
+        </p>
+      </div>
+      <div class="imgBx"></div>
+    </section>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+  </body>
+</html>

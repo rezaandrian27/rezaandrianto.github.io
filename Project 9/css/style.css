@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,900;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  background-color: burlywood;
+  justify-content: space-around;
+  padding: 20px 0;
+  color: blanchedalmond;
+  align-items: center;
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: blanchedalmond;
+  text-decoration: none;
+}
+
+.logo {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+nav ul li a:hover {
+  color: cornflowerblue;
+  transition: 1s;
+}
+
+.content {
+  text-align: center;
+  background-color: salmon;
+}
+
+.content img {
+  height: 250px;
+  border-radius: 25px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.content h3 {
+  letter-spacing: 2px;
+}
+
+.About {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.About .contentBx {
+  background: burlywood;
+  padding: 50px;
+  width: 50%;
+}
+
+.heading {
+  color: blanchedalmond;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.About .imgBx {
+  background: url(/lib/beachluv.jpeg);
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px 0 0 0;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: blanchedalmond;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+  /* background-color: red; */
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+  /* background-color: red; */
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Responsive Tablet*/
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50px;
+  }
+}
+
+/* Responsive Mobile */
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: teal;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
